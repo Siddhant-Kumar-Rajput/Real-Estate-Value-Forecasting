@@ -1,47 +1,41 @@
-# Flutter Wallpaper App
+# Real Estate Value Forecasting
 
-## Objective
+## Project Overview
 
-Create a simple Wallpaper App using Flutter. The app allows users to browse and set wallpapers on their device.
+"Real Estate Value Forecasting" is a predictive data analysis project aimed at estimating house prices using machine learning techniques. This project involves data cleaning, visualization, and the application of a linear regression model for prediction.
 
-## Features
-### Home Screen
+## Dataset
 
-- Display a list/grid of wallpapers.
-- A Floating Action Button switches the view between list and grid.
-- Each wallpaper is a clickable thumbnail that navigates to a detailed view.
-- Infinite scrolling is implemented on the home screen using pagination to load more wallpapers as the user scrolls down.
+The dataset used for this project was sourced from Kaggle and is saved as `Pricing_Data.csv`.
 
-### Detail Screen
+## Files and Directories
 
-- Display the full-size wallpaper.
-- Provide options to:
-    - Set the wallpaper as the home screen background.
-    - Set the wallpaper as the lock screen background.
+- `Pricing_Data.csv`: The original dataset downloaded from Kaggle.
+- `Pricing_DataCleaning.ipynb`: Jupyter Notebook for data cleaning processes.
+- `Cleaned_Data_Pricing.csv`: The cleaned dataset after preprocessing.
+- `Pricing_DataVisual.ipynb`: Jupyter Notebook for data visualization using Matplotlib and Seaborn.
+- `Pricing_DataModel.ipynb`: Jupyter Notebook for predicting house prices using a linear regression model.
+
+## Data Cleaning Process
+
+The data cleaning process was performed in `Pricing_DataCleaning.ipynb` and included the following steps:
+1. **Detecting Null Values**: Identified missing values in the dataset.
+2. **Handling Null Values**: Filled or removed null values as appropriate.
+3. **Data Type Updates**: Ensured all data types were correctly formatted.
+4. **Dropping Irrelevant Columns**: Removed unnecessary columns that did not contribute to the analysis.
 
 The cleaned data was saved as `Cleaned_Data.csv`.
 
-## API Integration
-Uses the Unsplash API to fetch wallpapers.
+## Data Visualization
 
-## State Management
-Uses GetX for state management.
+Data visualization was conducted in `Pricing_DataVisual.ipynb` using the following libraries:
+- **Matplotlib**: For creating static, interactive, and animated visualizations.
+- **Seaborn**: For making statistical graphics.
 
-## Packages Used
-- get: ^4.6.6
-- http: ^1.2.1
-- flutter_wallpaper_manager: ^0.0.4
-- wallpaper: ^1.1.1
-- flutter_cache_manager: ^3.1.2
-- cached_network_image: ^3.2.0
-- wallpaper_manager_flutter: ^0.0.2
-- shimmer: ^2.0.0
+These visualizations helped in understanding the distribution and relationships within the dataset.
 
-## Usage
-- Launch the app to see the home screen displaying a grid of wallpapers.
-- Use the Floating Action Button to switch between list and grid views.
-- Scroll down to load more wallpapers.
-- Tap on any wallpaper to navigate to the detail screen.
-- On the detail screen, choose to set the wallpaper as the home screen or lock screen background.
+## Model Building
 
-## Screenshots
+The predictive model was developed in `Pricing_DataModel.ipynb` using:
+- **Linear Regression**: Applied a simple linear regression model to predict house prices.
+- **Model Evaluation**: Achieved a perfect score of 1.0, indicative of a small and well-fitted dataset.
